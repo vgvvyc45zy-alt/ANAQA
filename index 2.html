@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANAQA</title>
+<meta name="description" content="ANAQA — a photography and lifestyle house. Prints for your home, studio, and everything in between.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600;700&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #000000;
+    --bg: #ffffff;
+    --line: #e5e5e5;
+    --muted-bg: #f0f0f0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 100;
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  .logo {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 4px;
+  }
+
+  .gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 32px 100px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .grid figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    aspect-ratio: 3/2;
+    background: var(--muted-bg);
+    cursor: pointer;
+  }
+  .grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), filter 0.6s ease;
+  }
+  .grid figure:hover img {
+    transform: scale(1.045);
+    filter: grayscale(0%);
+  }
+  .grid figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.6));
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .grid figure:hover figcaption { opacity: 1; transform: translateY(0); }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 48px 32px;
+  }
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer-links { display: flex; gap: 28px; }
+  .footer-links a { font-size: 14px; }
+  .footer-links a:hover { opacity: 0.5; }
+  .footer-note { font-size: 13px; color: var(--ink); opacity: 0.6; }
+
+  @media (max-width: 860px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 520px) {
+    .grid { grid-template-columns: 1fr; }
+    .gallery { padding: 60px 20px 70px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">ANAQA</div>
+  </div>
+</header>
+
+<section class="gallery" id="work">
+  <div class="grid">
+    <figure><img src="https://picsum.photos/seed/anaqa01/1000/700" alt="Photograph 1"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa02/1000/700" alt="Photograph 2"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa03/1000/700" alt="Photograph 3"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa04/1000/700" alt="Photograph 4"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa05/1000/700" alt="Photograph 5"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa06/1000/700" alt="Photograph 6"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa07/1000/700" alt="Photograph 7"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa08/1000/700" alt="Photograph 8"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa09/1000/700" alt="Photograph 9"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa10/1000/700" alt="Photograph 10"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa11/1000/700" alt="Photograph 11"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa12/1000/700" alt="Photograph 12"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa13/1000/700" alt="Photograph 13"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa14/1000/700" alt="Photograph 14"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa15/1000/700" alt="Photograph 15"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa16/1000/700" alt="Photograph 16"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa17/1000/700" alt="Photograph 17"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa18/1000/700" alt="Photograph 18"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa19/1000/700" alt="Photograph 19"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa20/1000/700" alt="Photograph 20"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa21/1000/700" alt="Photograph 21"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa22/1000/700" alt="Photograph 22"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa23/1000/700" alt="Photograph 23"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa24/1000/700" alt="Photograph 24"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa25/1000/700" alt="Photograph 25"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa26/1000/700" alt="Photograph 26"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa27/1000/700" alt="Photograph 27"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa28/1000/700" alt="Photograph 28"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa29/1000/700" alt="Photograph 29"><figcaption>Untitled, 2026</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/anaqa30/1000/700" alt="Photograph 30"><figcaption>Untitled, 2026</figcaption></figure>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="mailto:you@example.com">you@example.com</a>
+      <a href="#">Instagram</a>
+      <a href="#">Behance</a>
+    </div>
+    <div class="footer-note">© 2026 ANAQA. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
